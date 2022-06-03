@@ -1,18 +1,13 @@
-const readmeDataArgs = process.argv.slice(2, process.argv.length);
-console.log(readmeDataArgs);
+
+const fs = require('fs');
+const generatePage = require('./src/page-template.js');
+const readmeDataArgs = process.argv.slice(2);
+const [title, author] = readmeDataArgs;
 
 
 
+fs.writeFile('./index.html', generatePage(title, author), err => {
+  if(err) throw err;
 
-const printReadmeData = readmeDataArr => {
-    for (let i= 0; i < readmeDataArr.length; i++){
-
-    console.log(readmeDataArr[i]);
-    }
-    console.log('================');
-
-    // Is the same as this...
-    profileDataArr.forEach(profileItem => console.log(profileItem));
-  };
-  
-  printReadmeData(readmeDataArgs);
+  console.log('README complete! Checkout out index.hmtl to see the output!');
+});
