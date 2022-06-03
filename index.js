@@ -1,17 +1,6 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-// const fs = require('fs');
-// const generatePage = require('./src/page-template.js');
 
-// const pageHTML = generatePage(title, author);
-
-
-
-// fs.writeFile('./index.html', pageHTML, err => {
-//   if(err) throw err;
-
-//   console.log('README complete! Checkout out index.hmtl to see the output!');
-// });
 
 // TODO: Create an array of questions for user input
 const questions = [];
@@ -21,7 +10,15 @@ const promptUser = () => {
     {
       type:'input', 
       name: 'title',
-      message: 'What is the name of your project?'
+      message: 'What is the name of your project?',
+      validate: nameInput => {
+        if (nameInput) {
+          return true;
+        } else {
+          console.log('Please enter the name of the project!');
+          return false;
+        }
+      }
     },
     {
       type: 'input',
@@ -94,7 +91,15 @@ return inquirer.prompt([
   {
     type: 'input',
     name: 'name',
-    message: 'Enter the GitHub username'
+    message: 'Enter the GitHub username',
+    validate: nameInput => {
+      if (nameInput) {
+        return true;
+      } else {
+        console.log('Please enter your GitHub username!');
+        return false;
+      }
+    }
   },
   {
     type: 'input',
