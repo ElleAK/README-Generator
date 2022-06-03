@@ -80,9 +80,9 @@ const promptUser = () => {
 
 const promptQuestions = () => {
   console.log(`
-=================
-Add a New Project
-=================
+=====================
+Add Contact Questions
+=====================
 `);
 
 return inquirer.prompt([
@@ -100,7 +100,7 @@ return inquirer.prompt([
     type: 'input',
     name: 'link',
     message: 'Enter your email'
-  },
+  }
 ]);
 };
 
