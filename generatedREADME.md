@@ -44,4 +44,4 @@
   ### If you have any questions regarding this repository please contact me by GitHub:
   #### ElleAK
   ### Or email:
-  #### nightbirdphoto@gmail.com
+  #### nightbirdphotos@gmail.com
