@@ -7,11 +7,11 @@ const index = require('../index');
 function renderLicenseBadge(license) {
   let badge = '';
   if(license === 'MIT') {
-    badge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]'
+    badge = '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)'
   } else if (license === 'WTFPL') {
-    badge = '[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)]'
+    badge = '![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)'
   } else if (license === 'PDDL') {
-    badge = '[![License: ODbL](https://img.shields.io/badge/License-PDDL-brightgreen.svg)]'
+    badge = '![License: ODbL](https://img.shields.io/badge/License-PDDL-brightgreen.svg)'
   } else {
     badge = ''
   }
@@ -52,49 +52,49 @@ function generateMarkdown(answer) {
   # ${answer.title}
 
   ## Table of Contents:
-  ### [Description](#description)
-  ### [Installation](#installation)
-  ### [Usage](#usage)
-  ### [Technologies](#technologies)
-  ### [Tests](#test)
-  ### [Contributing](#contributing)
-  ### [Author](#author)
-  ### [Website](#link)
-  ### [License](#license)
-  ### [Questions](#questions)
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Technologies](#technologies)
+  - [Tests](#test)
+  - [Contributing](#contributing)
+  - [Author](#author)
+  - [Website](#link)
+  - [License](#license)
+  - [Questions](#questions)
 
   ## Description:
-  ### ${answer.description}
+  #### ${answer.description}
 
   ## Installation:
-  ### ${answer.installation}
+  #### ${answer.installation}
 
   ## Usage:
-  ### ${answer.usage}
+  #### ${answer.usage}
 
   ## Technologies:
-  ### ${answer.technologies}
+  #### ${answer.technologies}
 
   ## Tests:
-  ### ${answer.tests}
+  #### ${answer.tests}
 
   ## Contributing:
-  ### ${answer.contributing}
+  #### ${answer.contributing}
   
   ## Author:
-  ### ${answer.author}
+  #### ${answer.author}
 
   ## Deployed Site:
-  ### ${answer.link}
+  #### ${answer.link}
 
   ## ${renderLicenseSection(answer.license)} ${renderLicenseBadge(answer.license)}
-  ### ${renderLicenseLink(answer.license)}
+  #### ${renderLicenseLink(answer.license)}
 
   ## Questions:
   ### If you have any questions regarding this repository please contact me by GitHub:
-  ### ${answer.username}
+  #### ${answer.username}
   ### Or email:
-  ### ${answer.email}
+  #### ${answer.email}
 
 `;
 }

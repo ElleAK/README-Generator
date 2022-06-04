@@ -36,7 +36,7 @@
   ## Deployed Site:
   ### https://github.com/ElleAK/README-Generator
 
-  ## License: [![License: ODbL](https://img.shields.io/badge/License-PDDL-brightgreen.svg)]
+  ## License: ![License: ODbL](https://img.shields.io/badge/License-PDDL-brightgreen.svg)
   ### https://opendatacommons.org/licenses/pddl/
 
   ## Questions:
@@ -45,5 +45,5 @@
   ### Or email:
   ### nightbirdphoto@gmail.com
 
-
 <iframe src="https://drive.google.com/file/d/1ODnrIXDhs47o6Q99hqLGeM-HOlIM_6Mw/preview" width="640" height="480"></iframe>
+
