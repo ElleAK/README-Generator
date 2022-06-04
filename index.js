@@ -1,12 +1,10 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
 const { fs } = require('fs');
 const inquirer = require('inquirer');
-const { resolve } = require('path');
-const util = require('util');
-const generatorMarkdown = require('./util/generateMarkdown')
+const generateMarkdown = require('./utils/generateMarkdown.js')
 
 
-// TODO: Create an array of questions for user input
+// Array of questions for user input
 const questions = [
     {
       type:'input', 
@@ -25,11 +23,6 @@ const questions = [
       type: 'input',
       name: 'description',
       message: 'Provide some information about your project:'
-    },
-    {
-      type: 'input',
-      name: 'table-of-contents',
-      message: 'Enter Table of Contents'
     }, 
     {
       type: 'input',
@@ -72,6 +65,11 @@ const questions = [
       message: 'Enter your first and last name'
     },
     {
+      type: 'input',
+      name: 'link',
+      message: 'Enter the link to your GitHub repository'
+      },
+    {
       type: 'list',
       name: 'license',
       message: 'Choose a license',
@@ -79,10 +77,10 @@ const questions = [
     },
     {
     type: 'input',
-    name: 'name',
+    name: 'username',
     message: 'Enter the GitHub username',
-    validate: nameInput => {
-      if (nameInput) {
+    validate: usernameInput => {
+      if (usernameInput) {
         return true;
       } else {
         console.log('Please enter your GitHub username!');
@@ -92,21 +90,16 @@ const questions = [
     },
     {
     type: 'input',
-    name: 'link',
-    message: 'Enter the link to your GitHub repository'
-    },
-    {
-    type: 'input',
-    name: 'link',
+    name: 'email',
     message: 'Enter your email'
     }
   ];
 
 
-// TODO: Create a function to write README file
+// Function to write README file
 const writeToFile = fileContent => {
   return new Promise((resolve, reject) => {
-    fs.writeFile('./generateREADME.md', fileContent, err => {
+    fs.writeFile('./generatedREADME.md', fileContent, err => {
       if (err) {
         reject(err)
         return;
@@ -119,12 +112,12 @@ const writeToFile = fileContent => {
 };
 
 
-// TODO: Create a function to initialize app
+// Function to initialize app
 function init() {
   inquirer.prompt(questions)
   .then(function(answer) {
       console.log(answer);
-    var fileContent = generatorMarkdown(answer);
+    var fileContent = generateMarkdown(answer);
     writeToFile(fileContent)
   });
 }
