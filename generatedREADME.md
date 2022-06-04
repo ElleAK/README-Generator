@@ -37,7 +37,7 @@
   ## Deployed Site:
   ### https://github.com/ElleAK/README-Generator
 
-  ## License: ${license} [![License: ODbL](https://img.shields.io/badge/License-PDDL-brightgreen.svg)]
+  ## License: [![License: ODbL](https://img.shields.io/badge/License-PDDL-brightgreen.svg)]
   ### https://opendatacommons.org/licenses/pddl/
 
   ## Questions:
